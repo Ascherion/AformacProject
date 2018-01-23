@@ -3,26 +3,29 @@
 <head>
 	<title>Resultats</title>
 	<meta charset="utf-8" />
-		<title>Hey!!!</title>
+	<title>Hey!!!</title>
 </head>
 	<body>
 		<?php
+			$formulaire = array 
+			("nom" => $_POST['nom'], 
+			"prenom" => $_POST['prenom'], 
+			"adresse" => $_POST['adresse'], 
+			"email" => $_POST['email'], 
+			"telephone" => $_POST['telephone'], 
+			"age" => $_POST['age']);
 
-		if (empty($_POST["mail"]))
-		{
-			echo "E-mail invalide";
-		}
-
-		else if (empty($_POST["checkbox"]))
-		{
-			echo "Checkbox invalide";
-		}
-
-		else
-		{
-			echo "Vous etes bien sur la page des resultats... Et... C'est a peu près tout!";
-		}
+			foreach ($formulaire as $key => $value)
+			{
+  				if($value == "")
+  				{
+    				echo $key ." ". "erreur<br>";
+				}
+				else
+  				{
+    				echo $key ." ". "ok<br>";
+  				}
+			}
 		?>
-		</script>
 	</body>
 </html>
