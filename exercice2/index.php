@@ -4,18 +4,7 @@
 		<title>Hey!!!</title>
 	</head>
 	<body>
-        <?php
-            if(isset($_GET['wololo']))
-            {
-        ?>
-                <p class="erreur">
-                    <?php echo $_GET['wololo'];?>
-                </p>
-        <?php
-            }
-        ?>
-
-		<form class="" action="verification.php" method="post">
+		<form class="" action="resultat.php" method="post">
     		<p>Renseignez votre email</p>
     		<input type="email" name="email" value="" method="post" /></br>
     		
